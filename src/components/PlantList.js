@@ -12,13 +12,14 @@ export default class PlantList extends Component {
   componentDidMount(){
     axios
       .get('http://localhost:3333/plants')
-      .then(res => {
+      .then((res) => {
         this.setState({
+          ...this.state.plants,
           plants: res.data,
         })
       })
-      .catch(err => {
-        console.err(err)
+      .catch((err) => {
+        console.log(err)
       })
   }
   /*********  DON'T CHANGE ANYTHING IN THE RENDER FUNCTION *********/
