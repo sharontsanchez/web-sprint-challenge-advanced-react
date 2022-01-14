@@ -118,8 +118,28 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What are the main differences between a class-based and a functional component?
 
+Components are the core building blocks of your react application. They enable you to break UI into chunks of reusable pieces that can be reused and worked with independently. 
+
+There are two ways to create components in React: the class-based component or the function component.
+The class component is a regular ES6 class that extends the component class of the React library. It is called a stateful component because it controls how the state changes and the implementation of the component logic. They also have access to all the different phases of a React lifecycle method. 
+The functional components are JavaScript functions. They were referred to as stateless or presentational components because they only accepted and returned data to be rendered to the DOM. But with the introduction of hooks like the state (useState) and the effect (useEffect) hooks, you are able to implement state and other react features thus write your entire UI with functional components.
+
+Class-based components requires several steps to create a dynamic component. It uses constructor and render methods. It also uses this.setState() to update the states and lifeycle method like componentDidMount to instantly update the state when the component mounted. 
+Functional components dont need a constructor or the render methods since its just a function and not a class. Hooks are able to integrate necessary features of React which were only available to class components. The hook, useState can add states to functional components and useEffect enables you to perform side effects in functional components; this combines compentDidMount, componentDidUpdate and componentWillUnmount combined. 
+
+Using functional components over class-based commponents will drastically eliminate the need to refactor the class component into a functional component when it grows. It doesnt require unneccessary binding methods. It cut downs multiple steps required within class-based components making it simpler. 
+
 2. When does a componentWillMount function be called? What about a componentDidUpdate?
+
+componentWillMount is called before the component is rendered for the first time. componentDidUpdate is called after render is finished. It is invoked after an update occurs (i.e. changes to state or props).
 
 3. Define stateful logic.
 
+Stateful logic is any code that is used to manipulate or create data. Stateful logic is any code that uses state. Stateful logic is some behaviors that uses hook and custom hooks that can change state. 
+
 4. What are the three step of creating a successful test? What is done in each phase? 
+
+The three strp of creating a successful test are: 
+Arrange: Setup the react component we are testing.
+Act: Execute our behavior (if there is one).
+Assert: Extract the response element and check (if necessary) that it is what we expect it to be. 
