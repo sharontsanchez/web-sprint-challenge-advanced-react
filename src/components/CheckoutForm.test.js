@@ -12,10 +12,9 @@ test("renders without errors", () => {
 
 test("shows success message on submit with form details", async () => {
     // Arrange 
-    render(<checkoutForm/>)
+    render(<CheckoutForm/>);
 
     // Act 
-
     // get all the input
     const firstNameInput = screen.getByLabelText(/first name:/i);
     const lastNameInput = screen.getByLabelText(/last name:/i);
